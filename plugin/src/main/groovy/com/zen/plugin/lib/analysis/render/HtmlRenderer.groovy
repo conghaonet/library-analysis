@@ -23,7 +23,7 @@ class HtmlRenderer {
     public String render(Node root, OutputModuleList list, String msg) {
         String json = root ? "[${GSON.toJson(root)}]" : '[]'
         if (msg && msg.length() > 0) {
-            msg = msg.replace("\r\n", "<br>")
+            msg = msg.replace("\r\n", "<br>").replace("\n", "<br>")
         } else {
             msg = ""
         }

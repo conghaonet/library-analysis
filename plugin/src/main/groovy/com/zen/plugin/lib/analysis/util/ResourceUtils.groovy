@@ -7,7 +7,7 @@ package com.zen.plugin.lib.analysis.util;
 
 class ResourceUtils {
 
-    static final RESOURCE_PATH  = "/com/zen/plugin/lib/analysis/"
+    static final RESOURCE_PATH = "/com/zen/plugin/lib/analysis/"
     static final RESOURCE_FILES = [
             "css/z/img/",
             "css/demo.css",
@@ -31,6 +31,10 @@ class ResourceUtils {
     private ResourceUtils() {
     }
 
+    /**
+     * 复制必要的资源文件到指定目录
+     * @param targetPath
+     */
     static void copyResources(String targetPath) {
         RESOURCE_FILES.each {
             if (it.endsWith('/')) {
